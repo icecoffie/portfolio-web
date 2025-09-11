@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Malika Shakila</title>
   <meta name="description" content="Portofolio Malika Shakila — Frontend Engineer. UI/UX & Frontend modern, cepat, dan accessible." />
-
-  <!-- Font -->
+  <meta name="keywords" content="Malika Shakila, Matrix Sync, matrix sync tech, Matrix Sync Tech, msync tech, UI/UX design, web app development, hosting, tech agency, best tech mentor, software development, responsive design, database management, cyber security, tech company" />
+  <meta name="author" content="Malika Shakila, Matrix Sync Tech" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Icon judul/tab -->
   <link rel="icon" href="assets/logo.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="assets/logo.png" />
+  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-</head>
 <body>
-  <!--  HEADER / NAV -->
   <header class="header">
     <div class="container nav">
       <a href="#beranda" class="brand">Malika<span>Shakila</span></a>
-      <nav aria-label="Navigasi utama">
+      <input id="nav-toggle" type="checkbox" class="nav-toggle" hidden>
+      <label for="nav-toggle" class="burger" aria-label="Toggle navigation" aria-controls="mainNav"></label>
+      <nav aria-label="Navigasi utama" id="mainNav">
         <ul class="nav__list">
           <li><a href="#about">About</a></li>
           <li><a href="#awards">Awards</a></li>
@@ -33,7 +33,6 @@
   </header>
 
   <main>
-    <!-- HERO  -->
     <section id="beranda" class="section hero">
       <div class="container hero__grid">
         <div class="hero__text">
@@ -47,17 +46,16 @@
           <strong>Malika Shakila</strong> a people with an eye for aesthetics, not just precision.
           </p>
           <ul class="stats" aria-label="Statistik singkat">
-            <li><strong>260+</strong><span>Projects</span></li>
+            <li><strong>260+</strong><span>Clients</span></li>
             <li><strong>3+ Yrs</strong><span>Experience</span></li>
-            <li><strong>13+</strong><span>Awards</span></li>
+            <li><strong>16+</strong><span>Awards</span></li>
           </ul>
 
           <ul class="socials" aria-label="Sosial media">
-            <li><a href="https://instagram.com/username" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://linkedin.com/in/username" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://behance.net/username" target="_blank" rel="noopener">Behance</a></li>
-            <li><a href="https://dribbble.com/username" target="_blank" rel="noopener">Dribbble</a></li>
-            <li><a href="https://github.com/username" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://instagram.com/malikashkl" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://linkedin.com/in/malikashkl" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://dribbble.com/msync" target="_blank" rel="noopener">Dribbble</a></li>
+            <li><a href="https://github.com/icecoffie" target="_blank" rel="noopener">GitHub</a></li>
           </ul>
         </div>
 
@@ -67,7 +65,6 @@
       </div>
     </section>
 
-    <!-- about + skills -->
     <section id="about" class="section section--lined">
       <div class="container split">
         <div>
@@ -82,155 +79,446 @@
             I'm ready to contribute to meaningful software solutions and further
             develop my skills through real-world projects.
           </p>
+          </p>
         </div>
 
         <aside class="skills">
           <h3 class="h3">Skills</h3>
           <ul class="skills__list">
-            <li><a class="tag skill" href="#">UI/UX Design</a></li>
-            <li><a class="tag skill" href="#">Frontend Engineer</a></li>
-            <li><a class="tag skill" href="#">Tech Mentor</a></li>
-            <li><a class="tag skill" href="#">Digital Marketing</a></li>
+            <li class="skill-card" data-shape="icosahedron">
+              <div class="canvas-container">
+                <canvas class="skill-canvas"></canvas>
+              </div>
+              <a class="tag skill" href="https://www.instagram.com/p/DJzHz98PCEH/?img_index=1" target="_blank">UI/UX Design 🎏</a>
+            </li>
+            <li class="skill-card" data-shape="torus">
+              <div class="canvas-container">
+                <canvas class="skill-canvas"></canvas>
+              </div>
+              <a class="tag skill" href="https://github.com/icecoffie/Ekonomi-Syariah-Web" target="_blank">Frontend Engineer 🐧</a>
+            </li>
+            <li class="skill-card" data-shape="dodecahedron">
+              <div class="canvas-container">
+                <canvas class="skill-canvas"></canvas>
+              </div>
+              <a class="tag skill" href="https://www.instagram.com/p/DJzHz98PCEH/?img_index=1" target="_blank">Tech Mentor 🧊</a>
+            </li>
+            <li class="skill-card" data-shape="tetrahedron">
+              <div class="canvas-container">
+                <canvas class="skill-canvas"></canvas>
+              </div>
+              <a class="tag skill" href="https://tech.msync.my.id" target="_blank">Digital Marketing 🌱</a>
+            </li>
           </ul>
         </aside>
       </div>
     </section>
 
-    <!-- awards -->
     <section id="awards" class="section section--alt">
       <div class="container">
         <h2 class="h2">Awards</h2>
 
         <div class="awards">
-          <a class="tag trophy" href="#" title="Community Choice">Top 1 - National Sains Olympiad (Informatics) </a>
-          <a class="tag trophy" href="#" title="Community Choice">Top 1 - Best Design Structure For Web App </a>
-          <a class="tag trophy" href="#" title="Top Performer — Web UI">Best Mentor Tech</a>
-          <a class="tag trophy" href="#" title="Design System Excellence">Design System Excellence</a>
-          <a class="tag trophy" href="#" title="Best Landing Experience">Top 2 - Coding Challange Fakultas Ilmu Komputer</a>
-          <a class="tag trophy" href="#" title="Community Choice">Top 2 - Game Developer for a web app </a>
+          <a class="tag trophy" href="https://www.linkedin.com/in/malikashkl/details/featured/1635550991999/single-media-viewer/?profileId=ACoAAD0wJn4BNShVktM_5xYO90hGobMjWQKvfw0" >Top 1 - National Sains Olympiad (Informatics) </a>
+          <a class="tag trophy" href="https://www.linkedin.com/feed/update/urn:li:activity:7365386417952215040/" target="_blank">Top 1 - Best Design Structure For Web App </a>
+          <a class="tag trophy" href="https://www.instagram.com/p/DJzHz98PCEH/?img_index=1" >Best Mentor Tech</a>
+          <a class="tag trophy" href="https://www.linkedin.com/feed/update/urn:li:activity:7364174726551793665/" title="Best">Design System Excellence</a>
+          <a class="tag trophy" href="https://www.instagram.com/p/DBXg9ptzvJg/?img_index=2" target="_blank">Top 2 - Coding Challange Fakultas Ilmu Komputer</a>
+          <a class="tag trophy" href="https://www.linkedin.com/in/malikashkl/overlay/1731311114920/single-media-viewer/?profileId=ACoAAD0wJn4BNShVktM_5xYO90hGobMjWQKvfw0" target="_blank">Top 2 - Game Developer for a web app </a>
+          <a class="tag trophy" href="https://malikashkl.vercel.app" target="_blank">Best Web Portofolio with Three JS </a>
+          <a class="tag trophy" href="https://orbix.msync.my.id" target="_blank">Most Innovative Web App AI</a>
+          <a class="tag trophy" href="https://testy.msync.my.id" target="_blank">Youngest IT Expert </a>
         </div>
       </div>
     </section>
 
-    <!-- portfolio -->
-<section id="portfolio" class="section">
-  <div class="container">
-    <div class="head">
-      <h2 class="h2">Portfolios</h2>
-      <p class="muted">Showcases for my projects</p>
-    </div>
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="head">
+          <h2 class="h2">Portfolios</h2>
+          <p class="muted">Showcases for my projects</p>
+        </div>
 
-    <div class="projects projects--showcase">
-      <!-- Card 1 -->
-      <article class="proj-card">
-        <div class="proj__media">
-          <img class="proj__img" src="assets/othello.jpg" alt="Othello Game - Othellosm">
-          <span class="repo-badge" aria-hidden="true"></span>
-          <span class="media-decor" aria-hidden="true"></span>
-        </div>
-        <div class="proj__body">
-          <h3 class="proj__title">Othello Game - Othellosm</h3>
-          <p class="proj__desc">VS AI or Friends, How to play othello.</p>
-          <ul class="tags">
-            <li><span>#React JS</span></li>
-            <li><span>#Express JS</span></li>
-          </ul>
-        </div>
-        <a class="proj__link" href="https://othellosm.msync.my.id" target="_blank" rel="noopener" aria-label="Open Othello Game - Othellosm"></a>
-      </article>
+        <div class="projects projects--showcase" id="projectsList">
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/othello.jpg" alt="Othello Game - Othellosm">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Othellosm</h3>
+              <p class="proj__desc">Othello Game VS AI or Friends, How to play othello.</p>
+              <ul class="tags">
+                <li><span>#React JS</span></li>
+                <li><span>#Express JS</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://othellosm.msync.my.id" target="_blank" rel="noopener" aria-label="Open Othello Game - Othellosm"></a>
+          </article>
 
-      <!-- Card 2 -->
-      <article class="proj-card">
-        <div class="proj__media">
-          <img class="proj__img" src="assets/orbix.png" alt="E-Commerce UI Kit">
-          <span class="media-decor" aria-hidden="true"></span>
-        </div>
-        <div class="proj__body">
-          <h3 class="proj__title">Orbix AI</h3>
-          <p class="proj__desc">AI Matrix Sync via Chat DM Instagram</p>
-          <ul class="tags">
-            <li><span>#MetaAI</span></li>
-            <li><span>#ReactJS</span></li>
-          </ul>
-        </div>
-        <a class="proj__link" href="https://orbix.msync.my.id" target="_blank" rel="noopener" aria-label="Open E-Commerce UI Kit"></a>
-      </article>
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/orbix.png" alt="E-Commerce UI Kit">
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Orbix AI</h3>
+              <p class="proj__desc">AI Matrix Sync via Chat DM Instagram</p>
+              <ul class="tags">
+                <li><span>#MetaAI</span></li>
+                <li><span>#ReactJS</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://orbix.msync.my.id" target="_blank" rel="noopener" aria-label="Open E-Commerce UI Kit"></a>
+          </article>
 
-      <!-- Card 3 -->
-      <article class="proj-card">
-        <div class="proj__media">
-          <img class="proj__img" src="assets/iceblast.png" alt="Ice Blast Game">
-          <span class="media-decor" aria-hidden="true"></span>
-        </div>
-        <div class="proj__body">
-          <h3 class="proj__title">Ice Blast Game</h3>
-          <p class="proj__desc">Drag n Drop block game</p>
-          <ul class="tags">
-            <li><span>#Javascript</span></li>
-            <li><span>#VanillaJS</span></li>
-          </ul>
-        </div>
-        <a class="proj__link" href="https://iceblast.msync.my.id" target="_blank" rel="noopener" aria-label="Open SaaS Dashboard"></a>
-      </article>
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/iceblast.png" alt="Ice Blast Game">
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Ice Blast Game</h3>
+              <p class="proj__desc">Drag n Drop block game</p>
+              <ul class="tags">
+                <li><span>#Javascript</span></li>
+                <li><span>#VanillaJS</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://iceblast.msync.my.id" target="_blank" rel="noopener" aria-label="Open SaaS Dashboard"></a>
+          </article>
 
-      <!-- Card 4 -->
-      <article class="proj-card">
-        <div class="proj__media">
-          <img class="proj__img" src="assets/komunitas.png" alt="Community">
-          <span class="media-decor" aria-hidden="true"></span>
-        </div>
-        <div class="proj__body">
-          <h3 class="proj__title">Tech Community</h3>
-          <p class="proj__desc">Community for everyone who want to study about tech</p>
-          <ul class="tags">
-            <li><span>#Tech</span></li>
-            <li><span>#Mentor</span></li>
-          </ul>
-        </div>
-        <a class="proj__link" href="https://www.whatsapp.com/channel/0029VbBNHToKrWQoNtBduu2u" target="_blank" rel="noopener" aria-label="Open Marketing Site"></a>
-      </article>
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/mejikuhibinu.png" alt="Web Porto">
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Portofolio Keren</h3>
+              <p class="proj__desc">Ayo buat web portofolio mu yang paling keren dan heboh itu</p>
+              <ul class="tags">
+                <li><span>#ThreeJS</span></li>
+                <li><span>#Mejikuhibiniu</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://shakti.msync.my.id" target="_blank" rel="noopener" aria-label="Open Marketing Site"></a>
+          </article>
 
-      <!-- Card 5 -->
-      <article class="proj-card">
-        <div class="proj__media">
-          <img class="proj__img" src="assets/dribbble.jpeg" alt="dribbble">
-          <span class="repo-badge" aria-hidden="true"></span>
-          <span class="media-decor" aria-hidden="true"></span>
-        </div>
-        <div class="proj__body">
-          <h3 class="proj__title">Design Showcases</h3>
-          <p class="proj__desc">Showcases for design</p>
-          <ul class="tags">
-            <li><span>#Figma</span></li>
-            <li><span>#Dribbble</span></li>
-          </ul>
-        </div>
-        <a class="proj__link" href="https://dribbble.com/msync" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
-      </article>
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/dribbble.jpeg" alt="dribbble">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Design Showcases</h3>
+              <p class="proj__desc">Showcases for design</p>
+              <ul class="tags">
+                <li><span>#Figma</span></li>
+                <li><span>#Dribbble</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://dribbble.com/msync" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
 
-      <!-- Card 6 -->
-      <article class="proj-card">
-        <div class="proj__media">
-          <img class="proj__img" src="assets/allporto.jpeg" alt="all">
-          <span class="repo-badge" aria-hidden="true"></span>
-          <span class="media-decor" aria-hidden="true"></span>
-        </div>
-        <div class="proj__body">
-          <h3 class="proj__title">More Projects</h3>
-          <p class="proj__desc">For all projects</p>
-          <ul class="tags">
-            <li><span>#React</span></li>
-            <li><span>#Tailwind</span></li>
-          </ul>
-        </div>
-        <a class="proj__link" href="https://tech.msync.my.id" target="_blank" rel="noopener" aria-label="Open Finance Portal"></a>
-      </article>
-    </div>
-  </div>
-</section>
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/invorbit.png" alt="invorbit">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Invorbit</h3>
+              <p class="proj__desc">Invoice Web App</p>
+              <ul class="tags">
+                <li><span>#ReactJS</span></li>
+                <li><span>#Tailwind</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://invorbit.vercel.app" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
 
 
-    <!-- contact -->
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/komunitas.png" alt="Community">
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Tech Community</h3>
+              <p class="proj__desc">Community for everyone who want to study about tech</p>
+              <ul class="tags">
+                <li><span>#Tech</span></li>
+                <li><span>#Mentor</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://www.whatsapp.com/channel/0029VbBNHToKrWQoNtBduu2u" target="_blank" rel="noopener" aria-label="Open Marketing Site"></a>
+          </article>
+
+
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/objectdetect.jpeg" alt="objectdetect">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Object Detection</h3>
+              <p class="proj__desc">Simple Object Detection</p>
+              <ul class="tags">
+                <li><span>#TensorFlowJS</span></li>
+                <li><span>#YOLO</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://codepen.io/icecoffie/full/dPyvQwZ" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+          
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/tetr1s.png" alt="tetr1s">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">TETR1S GAME</h3>
+              <p class="proj__desc">Game tetris responsive</p>
+              <ul class="tags">
+                <li><span>#Javascript</span></li>
+                <li><span>#Games</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://tetr1s.msync.my.id" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/rubik.png" alt="rubik">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">MAIN RUBIK GAME</h3>
+              <p class="proj__desc">Game rubik 3d responsive</p>
+              <ul class="tags">
+                <li><span>#ThreeJS</span></li>
+                <li><span>#Games</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://mainrubik.msync.my.id" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+          
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/turutudu.png" alt="turutudu">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Turu Tudu</h3>
+              <p class="proj__desc">To Do List Web App</p>
+              <ul class="tags">
+                <li><span>#Javascript</span></li>
+                <li><span>#ToDo</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://turutudu.msync.my.id" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/syncwave.png" alt="syncwave">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Syncwave</h3>
+              <p class="proj__desc">Music App responsive</p>
+              <ul class="tags">
+                <li><span>#Javascript</span></li>
+                <li><span>#Music</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://syncwave.msync.my.id" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/skybreez.png" alt="skybreez">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Skybreez</h3>
+              <p class="proj__desc">Weather App</p>
+              <ul class="tags">
+                <li><span>#Javascript</span></li>
+                <li><span>#WebApp</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://skybreez.msync.my.id" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/retrodesk.png" alt="retrodesk">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Retro Desktop</h3>
+              <p class="proj__desc">Nostalgic Preview Retro</p>
+              <ul class="tags">
+                <li><span>#CSS</span></li>
+                <li><span>#MatrixSync</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://codepen.io/icecoffie/full/jEbNKYR" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/tanya.png" alt="tanya">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Tanya Web</h3>
+              <p class="proj__desc">For Anything Questions</p>
+              <ul class="tags">
+                <li><span>#CSS</span></li>
+                <li><span>#FaQ</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://tanya.msync.my.id" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/drinkext.png" alt="drinkext">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Drink Extension</h3>
+              <p class="proj__desc">Visual Studio Code Extension : Pop Up Drink Reminder</p>
+              <ul class="tags">
+                <li><span>#Javascript</span></li>
+                <li><span>#Json</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://marketplace.visualstudio.com/items?itemName=MatrixSync.drinkwater-extension" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/sagaramck.png" alt="sagara">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Sagara Resto</h3>
+              <p class="proj__desc">Web Sagara Resto</p>
+              <ul class="tags">
+                <li><span>#HTML</span></li>
+                <li><span>#CSS</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://sagara.msync.my.id" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/synconfsmck.png" alt="synconfs">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">SynConfs</h3>
+              <p class="proj__desc">Conference web timeline</p>
+              <ul class="tags">
+                <li><span>#HTML</span></li>
+                <li><span>#CSS</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://github.com/icecoffie/synconfs" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/speedytype.png" alt="speedytype">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Speedytype</h3>
+              <p class="proj__desc">Writing Speed Check</p>
+              <ul class="tags">
+                <li><span>#ReactJS</span></li>
+                <li><span>#Keyboard</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://codepen.io/icecoffie/full/LEYKYmR" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/monapeng.png" alt="glacierzs">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Glacierzs</h3>
+              <p class="proj__desc">Fashion E-Commerce Anown</p>
+              <ul class="tags">
+                <li><span>#HTML</span></li>
+                <li><span>#CSS</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://github.com/icecoffie/glacierzs" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/dashboard.png" alt="dashboard">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Dashboard Admin and User</h3>
+              <p class="proj__desc">Leader Frontend Developer for make Db admin E-Commerce Lab Shar'e</p>
+              <ul class="tags">
+                <li><span>#Typescript</span></li>
+                <li><span>#ReactTS</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://github.com/icecoffie/Dashboard-Admin-Paling-Fix" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj__media">
+              <img class="proj__img" src="assets/allporto.jpeg" alt="all">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">More Projects</h3>
+              <p class="proj__desc">For all projects</p>
+              <ul class="tags">
+                <li><span>#React</span></li>
+                <li><span>#Tailwind</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://docs.google.com/spreadsheets/d/1qfATqXNokCWCgpNYU4if_lRzVRJM55zu7oycrJM06LI/edit?usp=sharing" target="_blank" rel="noopener" aria-label="Open Finance Portal"></a>
+          </article>
+        </div>
+
+        <div class="projects__actions">
+          <button class="btn btn--glow" id="loadMoreBtn" type="button">Load More Project</button>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="section section--lined">
       <div class="container contact">
         <div>
@@ -243,23 +531,23 @@
           </ul>
         </div>
 
-        <!-- form -->
-        <form class="form" action="#" method="post">
+        <form class="form" action="https://formspree.io/f/xjkrorey" method="POST">
           <label><span>Name</span><input type="text" name="nama" placeholder="Your Name" required></label>
           <label><span>Email</span><input type="email" name="email" placeholder="tech@email.com" required></label>
           <label><span>Messages</span><textarea name="pesan" rows="5" placeholder="messages.." required></textarea></label>
-          <button type="submit" class="btn btn--full">Submit</button>
+          <button type="submit" class="btn btn--glow">Submit</button>
         </form>
       </div>
     </section>
   </main>
 
-  <!-- footer -->
-  <footer class="footer">
-    <div class="container foot">
-      <p>© 2025 Malika Shakila — Frontend Engineer • Matrix Sync</p>
-      <a href="#beranda" class="to-top" aria-label="Back to home">↑</a>
-    </div>
-  </footer>
+<footer class="footer">
+  <div class="footer-bg">Malika Shakila</div>
+  <div class="container foot">
+    <p>© 2025 🐧🧊 All rights reserved.</p>
+    <p>Ready to dive in? <a href="https://wa.me/6285187732004">Let's go deeper.</a></p>
+  </div>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>
