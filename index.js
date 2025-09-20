@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Malika Shakila</title>
-  <meta name="description" content="Portofolio Malika Shakila — Frontend Engineer. UI/UX & Frontend modern, cepat, dan accessible." />
-  <meta name="keywords" content="Malika Shakila, Matrix Sync, matrix sync tech, Matrix Sync Tech, msync tech, UI/UX design, web app development, hosting, tech agency, best tech mentor, software development, responsive design, database management, cyber security, tech company" />
+  <meta name="description" content="Portofolio Malika Shakila — Frontend Engineer. UI/UX & Frontend with modern design." />
+  <meta name="keywords" content="Malika Shakila, malika shakila, Matrix Sync, matrix sync tech, Matrix Sync Tech, msync tech, UI/UX design, web app development, hosting, tech agency, best tech mentor, software development, responsive design, database management, cyber security, tech company" />
   <meta name="author" content="Malika Shakila, Matrix Sync Tech" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/logo.png" type="image/png" sizes="32x32" />
@@ -14,6 +14,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
 <body>
   <header class="header">
@@ -56,6 +58,7 @@
             <li><a href="https://linkedin.com/in/malikashkl" target="_blank" rel="noopener">LinkedIn</a></li>
             <li><a href="https://dribbble.com/msync" target="_blank" rel="noopener">Dribbble</a></li>
             <li><a href="https://github.com/icecoffie" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="assets/Malika Shakila.png" target="_blank" rel="noopener">Resume</a></li>
           </ul>
         </div>
 
@@ -327,6 +330,23 @@
 
           <article class="proj-card">
             <div class="proj__media">
+              <img class="proj__img" src="assets/skirtzmockup.png" alt="skybreez">
+              <span class="repo-badge" aria-hidden="true"></span>
+              <span class="media-decor" aria-hidden="true"></span>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Skirtz</h3>
+              <p class="proj__desc">Freelancer Hub</p>
+              <ul class="tags">
+                <li><span>#Tailwind</span></li>
+                <li><span>#ThreeJs</span></li>
+              </ul>
+            </div>
+            <a class="proj__link" href="https://skirtz.msync.my.id" target="_blank" rel="noopener" aria-label="Open Mobile App UI"></a>
+          </article>
+          
+          <article class="proj-card">
+            <div class="proj__media">
               <img class="proj__img" src="assets/syncwave.png" alt="syncwave">
               <span class="repo-badge" aria-hidden="true"></span>
               <span class="media-decor" aria-hidden="true"></span>
@@ -519,28 +539,34 @@
       </div>
     </section>
 
-    <section id="contact" class="section section--lined">
-      <div class="container contact">
-        <div>
-          <h2 class="h2">Let’s Talk</h2>
-          <p class="muted">Any questions? I won’t bite, I promise.</p>
-          <ul class="contact__list">
-            <li><strong>Email:</strong> <a href="mailto:malika@msync.my.id">malika@msync.my.id</a></li>
-            <li><strong>Matrix Sync:</strong> <a href="https://tech.msync.my.id" target="_blank" rel="noopener">tech.msync.my.id</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/malikashkl" target="_blank" rel="noopener">linkedin.com/in/malikashkl</a></li>
-          </ul>
-        </div>
+   <section id="contact" class="section section--lined">
+  <canvas id="three-contact"></canvas>
+  <div class="container contact">
+    <div>
+      <h2 class="h2">Let’s Talk</h2>
+      <p class="muted">Any questions? I won’t bite, I promise.</p>
+      <ul class="contact__list">
+        <li><strong>Email :</strong> <a href="mailto:malika@msync.my.id">malika@msync.my.id</a></li>
+        <li><strong>Matrix Sync :</strong> <a href="https://tech.msync.my.id" target="_blank">tech.msync.my.id</a></li>
+        <li><strong>LinkedIn :</strong> <a href="https://linkedin.com/in/malikashkl" target="_blank">linkedin.com/in/malikashkl</a></li>
+      </ul>
+    </div>
 
-        <form class="form" action="https://formspree.io/f/xjkrorey" method="POST">
-          <label><span>Name</span><input type="text" name="nama" placeholder="Your Name" required></label>
-          <label><span>Email</span><input type="email" name="email" placeholder="tech@email.com" required></label>
-          <label><span>Messages</span><textarea name="pesan" rows="5" placeholder="messages.." required></textarea></label>
-          <button type="submit" class="btn btn--glow">Submit</button>
-        </form>
-      </div>
-    </section>
+    <form id="contact-form" class="form" action="https://formspree.io/f/xjkrorey" method="POST" novalidate>
+      <label><span>Name</span><input type="text" name="nama" placeholder="Your Name" required></label>
+      <label><span>Email</span><input type="email" name="email" placeholder="tech@email.com" required></label>
+      <label><span>Messages</span><textarea name="pesan" rows="5" placeholder="messages.." required></textarea></label>
+
+      <button type="submit" class="btn btn--glow flex items-center justify-center gap-2">
+        <span class="btn-text">Send Message</span>
+        <span class="spinner hidden"></span>
+      </button>
+      <p id="form-status" class="mt-4 text-sm"></p>
+    </form>
+  </div>
+</section>
   </main>
-
+  
 <footer class="footer">
   <div class="footer-bg">Malika Shakila</div>
   <div class="container foot">
